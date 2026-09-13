@@ -10,3 +10,4 @@ rm -fr  "~/.local/share/terminal-browser-*",
 rm -fr  "~/.local/state/terminal-browser",
 rm -fr  "~/.local/state/terminal-browser-*",
 rm -fr  "~/.local/bin/terminal-browser"
+rm "~/.local/bin/terminal-browser"
