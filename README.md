@@ -1,5 +1,6 @@
 # terminal-browser
 
+This is as fork of terminal-browser. The changes here explicitly remove angent settings and configuration. Keep agents out of my browser!
 
 A real browser that runs inside your terminal
 
