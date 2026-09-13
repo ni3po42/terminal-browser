@@ -9,7 +9,7 @@ source ~/.bashrc
 
 # npm
 echo node > .nvmrc
-nvm install
+nvm install node
 source ~/.bashrc
 
 # esbuild
