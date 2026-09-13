@@ -188,16 +188,7 @@ export class Registry {
         if (request.tab === undefined) throw new Error("close-tab needs a tab id");
         if (!this.host.closeTab(request.tab)) throw new Error(`no tab ${request.tab}`);
         return { ...this.record(), tabs: await this.host.targets() };
-      }
-      case "agent-touch": {
-        if (request.tab === undefined) throw new Error("agent-touch needs a tab id");
-        if (!this.host.agentTouch(request.tab)) throw new Error(`no tab ${request.tab}`);
-        return this.record();
-      }
-      case "agent-release": {
-        this.host.agentRelease();
-        return { ...this.record(), tabs: await this.host.targets() };
-      }
+      }      
       default:
         throw new Error(`unknown command: ${request.cmd}`);
     }
