@@ -1425,26 +1425,8 @@ class Session {
     }
   }
 
-  private grabMenuItem(): PageMenuItem {
-    return {
-      id: "grab",
-      label: this.activeGrab()?.active ? "stop selection" : "send to agent",
-      enabled: true,
-      shortcut: grabKeyLabel,
-      icon: this.grabIcon ? { kind: "image", src: this.grabIcon } : undefined,
-    };
-  }
-
   private toolMenuItems(): PageMenuItem[] {
-    return [
-      this.grabMenuItem(),
-      {
-        id: "record",
-        label: this.activeRecord() ? "complete recording" : "record",
-        enabled: true,
-        shortcut: this.activeRecord() ? "" : recordKeyLabel,
-        icon: { kind: "path", d: ICONS.record, tint: "red", weight: 4.5 },
-      },
+    return [ 
       {
         id: "inspect",
         label: "inspect",
