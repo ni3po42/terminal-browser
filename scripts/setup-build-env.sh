@@ -15,4 +15,4 @@ source ~/.bashrc
 # esbuild
 npm install --save-exact --save-dev esbuild
 npm install -g pnpm
-pnpm install --frozen-lockfile
+pnpm install --no-frozen-lockfile
