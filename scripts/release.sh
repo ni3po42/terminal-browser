@@ -32,8 +32,8 @@ if [ -n "$DARWIN_ARCH" ]; then
     -o "$STAGE/bin/native-scroll-helper"
 fi
 
-AGENT_BROWSER_BIN="$("$ROOT/scripts/agent-browser.sh" --path)"
-cp "$AGENT_BROWSER_BIN" "$STAGE/agent-browser/bin/agent-browser"
+# AGENT_BROWSER_BIN="$("$ROOT/scripts/agent-browser.sh" --path)"
+# cp "$AGENT_BROWSER_BIN" "$STAGE/agent-browser/bin/agent-browser"
 
 "$ROOT/scripts/bundle.sh" "$ROOT/cli/src/main.ts" "$STAGE/cli/dist/main.js"
 "$ROOT/scripts/bundle.sh" "$ROOT/browser/src/main.tsx" "$STAGE/browser/dist/main.js"
