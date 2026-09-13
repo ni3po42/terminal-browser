@@ -1609,27 +1609,6 @@ class Session {
         run: () => this.openFind(),
       },
       {
-        id: "record",
-        label: this.activeRecord()
-          ? this.activeRecord()?.reviewing
-            ? "complete recording"
-            : "stop recording"
-          : "record page",
-        shortcut: this.activeRecord()?.reviewing ? "ctrl+enter" : recordKeyLabel,
-        run: () => {
-          const record = this.activeRecord();
-          if (!record) void this.startRecording();
-          else if (record.reviewing) record.actions.complete();
-          else record.actions.stop();
-        },
-      },
-      {
-        id: "grab",
-        label: this.activeGrab()?.active ? "stop selection" : "send to agent",
-        shortcut: grabKeyLabel,
-        run: () => void this.toggleGrab(),
-      },
-      {
         id: "devtools",
         label: this.tabs.activeController?.devtools ? "close devtools" : "open devtools",
         shortcut: bindingLabel(this.devtoolsBinding),
