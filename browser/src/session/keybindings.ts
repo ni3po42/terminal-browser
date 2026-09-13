@@ -7,28 +7,16 @@ export const defaultKeys =
     ? { palette: "super+p", find: "super+shift+f", devtools: "super+shift+i", console: "super+alt+j" }
     : { palette: "ctrl+k alt+k", find: "ctrl+shift+f", devtools: "ctrl+shift+i", console: "ctrl+alt+j" };
 
-export const recordKeyLabel = process.platform === "darwin" ? "ctrl+r" : "ctrl+shift+r";
+export const recordKeyLabel = "Not supported";
 
-export const grabKeyLabel = "ctrl+g";
+export const grabKeyLabel = "Not supported";
 
 export function isGrabKey(event: EngineKeyEvent): boolean {
-  return (
-    event.key.toLowerCase() === "g" &&
-    event.mods.ctrl &&
-    !event.mods.super &&
-    !event.mods.alt &&
-    !event.mods.shift
-  );
+  return false;
 }
 
 export function isRecordKey(event: EngineKeyEvent): boolean {
-  return (
-    event.key.toLowerCase() === "r" &&
-    event.mods.ctrl &&
-    !event.mods.super &&
-    !event.mods.alt &&
-    event.mods.shift === (process.platform !== "darwin")
-  );
+  return false;
 }
 
 export function parseKeyBindings(spec: string): KeyBinding[] {
