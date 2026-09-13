@@ -10,3 +10,4 @@ nvm install
 
 # esbuild
 npm install --save-exact --save-dev esbuild
+npm install -g pnpm
